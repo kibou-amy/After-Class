@@ -1,19 +1,33 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Profilemodal from "./pages/Profilemodal";
-import "./index.css";
-function App() {
-  return(
-  
-  <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/profile" element={<Profilemodal />} />
-  </Routes>
-  </BrowserRouter>
 
-);
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Messages from "./pages/Messages";
+
+import "./index.css";
+import "./styles/auth.css";
+import "./styles/Messages.css";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+
+        {/* Friend's pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profilemodal />} />
+
+        {/* Your pages */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/messages" element={<Messages />} />
+
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
