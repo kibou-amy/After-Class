@@ -24,10 +24,18 @@ button, input { font: inherit; }
 
 .auth-page {
   min-height: 100vh;
+  width: 100%;
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #FFF7E1;
+  align-items: flex-start;
+
+  background: #fff7e1;
+
+  padding: 24px 0;
+  box-sizing: border-box;
+
+  overflow-y: auto;
 }
 
 .auth-brand-panel {
@@ -132,20 +140,27 @@ button, input { font: inherit; }
 
 .auth-form-panel {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+  align-items: flex-start;
+
+  padding: 0;
 }
 
 .auth-card {
-  width: min(100%, 470px);
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 42px;
-  box-shadow: 0 18px 60px rgba(121,12,18,.08);
+  width: 100%;
+  max-width: 700px;
+
+  background: #fffdf8;
+
+  border: 1px solid #eadfc9;
+  border-radius: 30px;
+
+  padding: 45px 30px 35px;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
 }
 
 .eyebrow {
@@ -207,7 +222,23 @@ input:focus {
   justify-content: space-between;
 }
 
-.forgot, .switch-text button {
+.forgot {
+  border: 0;
+  background: none;
+  color: var(--wine);
+  cursor: pointer;
+  padding: 0;
+  font-weight: 700;
+  font-size: 12px;
+  justify-self: end;
+  margin-top: -3px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.switch-text button {
   border: 0;
   background: none;
   color: var(--wine);
@@ -238,6 +269,13 @@ input:focus {
   font-weight: 800;
 }
 
+.password-error {
+  margin: 6px 0 10px;
+  color: #790c12;
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .remember, .terms {
   display: flex;
   align-items: center;
@@ -248,7 +286,7 @@ input:focus {
 
 .remember input, .terms input { accent-color: var(--wine); }
 
-.primary-btn, .secondary-btn {
+.primary-btn {
   width: 100%;
   border-radius: 11px;
   padding: 14px;
@@ -269,22 +307,6 @@ input:focus {
   border: 1px solid var(--line);
   background: var(--cream);
   color: var(--ink);
-}
-
-.divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #aa9996;
-  font-size: 11px;
-  margin: 22px 0 2px;
-}
-
-.divider::before, .divider::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  background: var(--line);
 }
 
 .switch-text {
@@ -356,31 +378,49 @@ input:focus {
   .two-fields { grid-template-columns: 1fr; gap: 0; }
 }
 
-/* Form heading with logo on the left */
+
+/* =========================
+   SIGN UP HEADING
+========================= */
+
 .form-heading {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 22px;
-  margin-bottom: 12px;
+  text-align: center;
+  gap: 0;
+  margin-bottom: 30px;
 }
 
+/* Logo at the top */
 .heading-logo {
-  width: 95px;
-  height: 70px;
+  width: 120px;
+  height: auto;
+  display:block;
   object-fit: contain;
-  flex-shrink: 0;
+  margin: 0 auto 28px;
+  margin-bottom: 0px;
 }
 
+/* JOIN THE COMMUNITY */
 .form-heading .eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
+  color: var(--wine);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
+/* CREATE ACCOUNT */
 .form-heading h2 {
   margin: 0;
   color: #790c12;
   font-family: "Anton", Impact, sans-serif;
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
+  text-align: center;
 }
+

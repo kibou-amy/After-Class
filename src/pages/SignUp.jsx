@@ -1,12 +1,22 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function SignUp({ onLogin }) {
+export default function SignUp() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Your After Class account is ready!");
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  alert("Your After Class account is ready!");
+};
 
   return (
     <main className="auth-page">
@@ -17,20 +27,16 @@ export default function SignUp({ onLogin }) {
 
     <div className="form-heading">
       <img
-        src="/src/assets/after-class-logo.png"
+        src="/src/assets/Logo.png"
         alt="After Class"
         className="heading-logo"
       />
 
-      <div>
         <p className="eyebrow">JOIN THE COMMUNITY</p>
         <h2>Create account</h2>
-      </div>
+      
     </div>
 
-    <p className="form-intro">
-      Start connecting beyond the classroom.
-    </p>
      
 
           <form onSubmit={handleSubmit}>
@@ -62,12 +68,14 @@ export default function SignUp({ onLogin }) {
 
             <label>Password</label>
             <div className="password-wrap">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Create a password"
-                minLength="8"
-                required
-              />
+            <input
+  type={showPassword ? "text" : "password"}
+  placeholder="Create a password"
+  minLength="8"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  required
+/>
               <button
                 type="button"
                 className="password-toggle"
@@ -76,6 +84,26 @@ export default function SignUp({ onLogin }) {
                 {showPassword ? "Hide" : "Show"}
               </button>
             </div>
+
+            <label>Confirm password</label>
+
+<div className="password-wrap">
+
+  <input
+    type={showPassword ? "text" : "password"}
+    placeholder="Confirm your password"
+    value={confirmPassword}
+    onChange={(e) => setConfirmPassword(e.target.value)}
+    required
+  />
+
+</div>
+
+{confirmPassword && password !== confirmPassword && (
+  <p className="password-error">
+    Passwords do not match.
+  </p>
+)}
 
             <label className="terms">
               <input type="checkbox" required />
@@ -86,9 +114,12 @@ export default function SignUp({ onLogin }) {
           </form>
 
           <p className="switch-text">
-            Already have an account?
-            <button onClick={onLogin}>Log in</button>
-          </p>
+  Already have an account?
+  <button onClick={() => navigate("/login")}>
+    Log in
+  </button>
+</p>
+
         </div>
       </section>
     </main>

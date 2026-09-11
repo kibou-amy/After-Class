@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/after-class-logo.png";
+import logo from "../assets/Logo.png";
 
 export default function Messages() {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -41,7 +41,7 @@ export default function Messages() {
       time: "Yesterday",
       unread: 0,
     },
-      {
+    {
       id: 5,
       name: "Ilhem",
       role: "Student",
@@ -50,8 +50,8 @@ export default function Messages() {
       time: "Yesterday",
       unread: 0,
     },
-      {
-      id: 5,
+    {
+      id: 6,
       name: "Alae",
       role: "Student",
       online: true,
@@ -64,17 +64,46 @@ export default function Messages() {
   return (
     <main className="messages-page">
 
-      {/* LEFT SIDE */}
-      <aside className="messages-sidebar">
+      {/* =========================================
+          LEFT SIDE
+      ========================================= */}
 
-        <div className="messages-logo">
-          <img src={logo} alt="After Class" />
-        </div>
+     <aside className="messages-sidebar">
 
-        <button className="new-message-btn">
-          + New Message
-        </button>
+  {/* LOGO + HORIZONTAL NAVIGATION */}
+  <div className="messages-sidebar-top">
 
+    {/* Logo */}
+    <div className="messages-logo">
+      <img src={logo} alt="After Class" />
+    </div>
+
+    {/* Navigation Icons */}
+    <nav className="messages-nav">
+
+      <a href="/" title="Home">
+        🏠
+      </a>
+
+      <a href="/messages" className="active" title="Messages">
+        ✉
+      </a>
+
+      <a href="/settings" title="Settings">
+    ⚙️
+  </a>
+
+    </nav>
+
+  </div>
+
+
+  {/* New Message */}
+  <button className="new-message-btn">
+    + New Message
+  </button>
+
+        {/* Search */}
         <div className="search-messages">
           <input
             type="text"
@@ -82,9 +111,11 @@ export default function Messages() {
           />
         </div>
 
+        {/* Conversations */}
         <div className="conversation-list">
 
           {conversations.map((person) => (
+
             <div
               key={person.id}
               className={`conversation ${
@@ -97,28 +128,35 @@ export default function Messages() {
 
               {/* Avatar */}
               <div className="conversation-avatar">
-                {person.name.charAt(0)}
-                
-                {person.online && (
-                  <span className="online-dot"></span>
-                )}
+                {person.name.charAt(0).toUpperCase()}
               </div>
 
               {/* Information */}
               <div className="conversation-info">
 
                 <div className="conversation-top">
-                  <strong>{person.name}</strong>
+
+                  <strong>
+                    {person.name}
+                  </strong>
 
                   <span className="conversation-time">
                     {person.time}
                   </span>
+
                 </div>
 
                 <div className="conversation-bottom">
 
-                  <span className="conversation-role">
-                    {person.role}
+                  {/* ONLINE / OFFLINE */}
+                  <span
+                    className={`conversation-status ${
+                      person.online
+                        ? "online"
+                        : "offline"
+                    }`}
+                  >
+                    {person.online ? "Online" : "Offline"}
                   </span>
 
                   <span className="last-message">
@@ -137,6 +175,7 @@ export default function Messages() {
               )}
 
             </div>
+
           ))}
 
         </div>
@@ -144,38 +183,54 @@ export default function Messages() {
       </aside>
 
 
-      {/* RIGHT CHAT AREA */}
+      {/* =========================================
+          RIGHT CHAT AREA
+      ========================================= */}
+
       <section className="chat-area">
 
         {selectedPerson ? (
 
           <>
-            {/* Chat Header */}
+
+            {/* =====================================
+                CHAT HEADER
+            ===================================== */}
 
             <div className="chat-header">
 
               <div className="chat-user-avatar">
-                {selectedPerson.name.charAt(0)}
-
-                {selectedPerson.online && (
-                  <span className="online-dot"></span>
-                )}
+                {selectedPerson.name
+                  .charAt(0)
+                  .toUpperCase()}
               </div>
 
-              <div>
-                <h2>{selectedPerson.name}</h2>
+              <div className="chat-user-info">
 
-                <p>
+                <h2>
+                  {selectedPerson.name}
+                </h2>
+
+                <p
+                  className={
+                    selectedPerson.online
+                      ? "status-online"
+                      : "status-offline"
+                  }
+                >
                   {selectedPerson.online
                     ? "Online"
                     : "Offline"}
                 </p>
+
               </div>
 
             </div>
 
 
-            {/* Messages */}
+            {/* =====================================
+                SCROLLABLE MESSAGES
+            ===================================== */}
 
             <div className="chat-messages">
 
@@ -183,46 +238,97 @@ export default function Messages() {
                 <p>
                   Hey! Welcome to After Class 👋
                 </p>
-                <span>10:30</span>
+
+                <span>
+                  10:30
+                </span>
               </div>
+
 
               <div className="message sent">
                 <p>
                   Thanks! Nice to connect with you.
                 </p>
-                <span>10:31</span>
+
+                <span>
+                  10:31
+                </span>
               </div>
+
 
               <div className="message received">
                 <p>
                   How is your project going?
                 </p>
-                <span>10:32</span>
+
+                <span>
+                  10:32
+                </span>
+              </div>
+
+
+              <div className="message sent">
+                <p>
+                  It's going really well!
+                </p>
+
+                <span>
+                  10:33
+                </span>
+              </div>
+
+
+              <div className="message received">
+                <p>
+                  That's great! Let me know if you
+                  need any help.
+                </p>
+
+                <span>
+                  10:34
+                </span>
+              </div>
+
+
+              <div className="message sent">
+                <p>
+                  Thank you! I really appreciate it.
+                </p>
+
+                <span>
+                  10:35
+                </span>
               </div>
 
             </div>
 
 
-            {/* Message Input */}
+            {/* =====================================
+                MESSAGE INPUT
+            ===================================== */}
 
-            <div className="message-input-area">
+            <div className="message-input-wrapper">
 
-              <button className="emoji-btn">
-                😊
-              </button>
+              <div className="message-input-area">
 
-              <input
-                type="text"
-                placeholder={`Message ${selectedPerson.name}...`}
-              />
+                <button className="emoji-btn">
+                  😊
+                </button>
 
-              <button className="attachment-btn">
-                📎
-              </button>
+                <input
+                  type="text"
+                  placeholder={`Message ${selectedPerson.name}...`}
+                />
 
-              <button className="send-btn">
-                Send
-              </button>
+                <button className="attachment-btn">
+                  📎
+                </button>
+
+                <button className="send-btn">
+                  Send
+                </button>
+
+              </div>
 
             </div>
 
@@ -230,7 +336,9 @@ export default function Messages() {
 
         ) : (
 
-          /* Nothing selected */
+          /* =====================================
+             NOTHING SELECTED
+          ===================================== */
 
           <div className="empty-chat">
 
@@ -238,7 +346,9 @@ export default function Messages() {
               💬
             </div>
 
-            <h2>Select a conversation</h2>
+            <h2>
+              Select a conversation
+            </h2>
 
             <p>
               Choose a student or coach to start chatting.

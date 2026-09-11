@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Sidebar() {
   return (
     <nav className="sidebar">
@@ -25,17 +27,15 @@ export default function Sidebar() {
 
 
 
-        <a
-          href="#"
-          className="sidebar-link"
-        >
-        <span>✉</span>
-          Messages
+        <Link
+  to="/messages"
+  className="sidebar-link"
+>
+  <span>✉</span>
+  Messages
 
-          {/* BACKEND UNREAD COUNT */}
-          <span className="sidebar-count"></span>
-
-        </a>
+  <span className="sidebar-count"></span>
+</Link>
 
 
         <a
