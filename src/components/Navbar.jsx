@@ -2,6 +2,7 @@ import logo from "../assets/Logo.png";
 
 export default function Navbar() { 
   return ( 
+
     <header className="navbar"> 
 
       {/* LOGO */} 
@@ -16,10 +17,9 @@ export default function Navbar() {
       {/* SEARCH */} 
       <div className="search-container"> 
         <span className="search-icon">⌕</span>
-
         <input 
           type="text" 
-          placeholder="Search students, courses..." 
+          placeholder="Search students, coaches..." 
         />
       </div>
 

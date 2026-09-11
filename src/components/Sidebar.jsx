@@ -38,27 +38,8 @@ export default function Sidebar() {
         </a>
 
 
-        <a
-          href="#"
-          className="sidebar-link"
-        >
-         <span>☏</span>
-          Notifications
-
-          {/* BACKEND NOTIFICATION COUNT */}
-          <span className="sidebar-count"></span>
-
-        </a>
-
-      </div>
 
 
-      <div className="sidebar-divider"></div>
-
-
-      <p className="sidebar-title">
-        MY SPACE
-      </p>
 
 
       <div className="sidebar-main">
@@ -82,7 +63,7 @@ export default function Sidebar() {
         </a>
 
       </div>
-
+</div>
 
       <div className="help-card">
 
