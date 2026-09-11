@@ -1,121 +1,267 @@
-import React from "react";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+import ProfileCard from "../components/ProfileCard";
 
-export default function ProfileModal({ onClose }) {
+
+export default function Profile() {
   return (
-    <div className="profile-overlay" onClick={onClose}>
-      <div
-        className="profile-modal"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Close button */}
-        <button className="profile-close" onClick={onClose}>
-          ×
-        </button>
+    <div className="profile-page">
 
-        {/* Cover */}
-        <div className="profile-cover">
-          <div className="profile-avatar">
-            ?
-          </div>
-        </div>
+      {/* =================================
+          NAVBAR
+          Existing component
+      ================================= */}
+      <Navbar />
 
-        {/* Profile header */}
-        <div className="profile-header">
-          <div className="profile-title">
-            <span className="profile-label">AFTER CLASS</span>
 
-            <h1>Student Name</h1>
+     <div className="profilepage-layout">
 
-            <p className="profile-username">
-              @studentname
-            </p>
-          </div>
+  {/* LEFT COLUMN */}
+  <aside className="profilepage-left-column">
 
-          <button className="profile-message-btn">
-            Message
-          </button>
-        </div>
+    <ProfileCard />
 
-        {/* Stats */}
-        <div className="profile-stats">
-          <div className="profile-stat">
-            <strong>24</strong>
-            <span>Posts</span>
-          </div>
+    <Sidebar />
 
-          <div className="profile-stat">
-            <strong>86</strong>
-            <span>Connections</span>
-          </div>
+  </aside>
 
-          <div className="profile-stat">
-            <strong>12</strong>
-            <span>Classes</span>
-          </div>
-        </div>
 
-        {/* Main profile content */}
-        <div className="profile-content">
-          {/* About */}
-          <section className="profile-card">
-            <h2>About me</h2>
+  {/* MAIN PROFILE PAGE */}
+  <main className="profilepage-content">
 
-            <p>
-              Hey! I'm a student here at school. I love meeting
-              new people, sharing ideas and keeping up with
-              everything happening around campus.
-            </p>
-          </section>
 
-          {/* My class */}
-          <section className="profile-card">
-            <h2>My class</h2>
+          {/* =================================
+              PROFILE HEADER
+          ================================= */}
+          <section className="profilepage-header">
 
-            <div className="class-row">
-              <div className="class-icon">📚</div>
+            {/* Cover */}
+            <div className="profilepage-cover">
 
-              <div>
-                <h3>My Class</h3>
-                <p>School community</p>
+              {/* BACKEND:
+                  User profile picture will be displayed here
+              */}
+              <div className="profilepage-avatar">
+                <span>?</span>
               </div>
+
             </div>
+
+
+            <div className="profilepage-header-info">
+
+              <div className="profilepage-name-area">
+
+                {/* BACKEND:
+                    User's name will be inserted here
+                */}
+                <h1>
+                  Your name
+                </h1>
+
+                {/* BACKEND:
+                    User's role will be inserted here
+                */}
+                <p>
+                  Student
+                </p>
+
+                {/* BACKEND:
+                    User's course will be inserted here
+                */}
+                <span>
+                  Your course
+                </span>
+
+              </div>
+
+
+              {/* BACKEND:
+                  Connect this button to the edit-profile functionality
+              */}
+              <button className="edit-profile-btn">
+                Edit profile
+              </button>
+
+            </div>
+
+
+            {/* =================================
+                PROFILE STATS
+            ================================= */}
+            <div className="profilepage-stats">
+
+              <div className="profilepage-stat">
+                {/* BACKEND: number of posts */}
+                <strong>—</strong>
+                <span>Posts</span>
+              </div>
+
+              <div className="profilepage-stat">
+                {/* BACKEND: number of classmates */}
+                <strong>—</strong>
+                <span>Classmates</span>
+              </div>
+
+              <div className="profilepage-stat">
+                {/* BACKEND: course name */}
+                <strong>—</strong>
+                <span>Course</span>
+              </div>
+
+            </div>
+
           </section>
 
-          {/* Recent posts */}
-          <section className="profile-card">
-            <div className="profile-section-heading">
-              <h2>Recent posts</h2>
-              <span>View all</span>
+
+
+          {/* =================================
+              ABOUT SECTION
+          ================================= */}
+          <section className="profilepage-section">
+
+            <div className="section-title-row">
+
+              <h2>About</h2>
+
+              {/* BACKEND:
+                  Connect to edit functionality
+              */}
+              <button className="section-edit-btn">
+                Edit
+              </button>
+
             </div>
 
-            <div className="empty-profile-posts">
-              <div className="empty-post-icon">⌁</div>
 
-              <h3>No recent posts</h3>
-
+            {/* BACKEND:
+                User's biography goes here
+            */}
+            <div className="profilepage-empty-box">
               <p>
-                Posts from this student will appear here.
+                Your bio will appear here.
               </p>
             </div>
+
           </section>
 
-          {/* Connections */}
-          <section className="profile-card">
-            <div className="profile-section-heading">
-              <h2>Connections</h2>
-              <span>86 connections</span>
+
+
+          {/* =================================
+              PROFILE INFORMATION
+          ================================= */}
+          <section className="profilepage-section">
+
+            <div className="section-title-row">
+
+              <h2>Profile information</h2>
+
+              {/* BACKEND:
+                  Connect to edit functionality
+              */}
+              <button className="section-edit-btn">
+                Edit
+              </button>
+
             </div>
 
-            <div className="connection-avatars">
-              <div>?</div>
-              <div>?</div>
-              <div>?</div>
-              <div>?</div>
-              <div>+</div>
+
+            <div className="information-grid">
+
+              <div className="information-item">
+
+                <span>Email</span>
+
+                {/* BACKEND:
+                    User email goes here
+                */}
+                <p>
+                  —
+                </p>
+
+              </div>
+
+
+              <div className="information-item">
+
+                <span>Course</span>
+
+                {/* BACKEND:
+                    User course goes here
+                */}
+                <p>
+                  —
+                </p>
+
+              </div>
+
+
+              <div className="information-item">
+
+                <span>Year</span>
+
+                {/* BACKEND:
+                    User academic year goes here
+                */}
+                <p>
+                  —
+                </p>
+
+              </div>
+
+
+              <div className="information-item">
+
+                <span>Joined</span>
+
+                {/* BACKEND:
+                    Account creation date goes here
+                */}
+                <p>
+                  —
+                </p>
+
+              </div>
+
             </div>
+
           </section>
-        </div>
+
+
+
+          {/* =================================
+              EDIT PROFILE
+          ================================= */}
+          <section className="profile-edit-card">
+
+            <div>
+
+              <h2>
+                Keep your profile updated
+              </h2>
+
+              <p>
+                Add information about yourself so your
+                classmates can get to know you.
+              </p>
+
+            </div>
+
+
+            {/* BACKEND:
+                Connect this button to the edit profile form/modal
+            */}
+            <button className="profile-edit-main-btn">
+              Edit profile
+            </button>
+
+          </section>
+
+
+        </main>
+
       </div>
+
     </div>
   );
 }

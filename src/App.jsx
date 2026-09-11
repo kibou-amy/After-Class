@@ -7,9 +7,11 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Messages from "./pages/Messages";
 
+
 import "./index.css";
 import "./styles/auth.css";
 import "./styles/Messages.css";
+import "./styles/Profile.css"
 
 function App() {
   return (

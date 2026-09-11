@@ -4,7 +4,6 @@ import CreatePost from "../components/CreatePost";
 import Post from "../components/Post";
 import ProfileCard from "../components/ProfileCard";
 import QuickAccess from "../components/QuickAccess";
-
 import OnlinePeople from "../components/OnlinePeople";
 
 
