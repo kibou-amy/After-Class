@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bukhari+Script&display=swap');
+
+
+/* =================================
+   COLORS
+================================= */
+
+:root {
+  --wine: #790C12;
+  --cream: #FFF7E1;
+
+  --light-cream: #fffaf0;
+  --border: #eadfc8;
+
+  --text: #282522;
+  --muted: #89847d;
+}
+
+
+/* =================================
+   GENERAL
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.profile-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+
+/* =================================
+   PAGE LAYOUT
+================================= */
+
+.profilepage-layout {
+  display: grid;
+
+  grid-template-columns: 272px minmax(500px, 850px);
+
+  gap: 32px;
+
+  padding: 38px 32px 60px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  align-items: start;
+}
+
+
+/* =================================
+   LEFT COLUMN
+================================= */
+
+.profilepage-left-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  min-width: 0;
+}
+
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.profilepage-sidebar {
+  min-width: 0;
+}
+
+
+/* =================================
+   EXISTING PROFILE CARD
+================================= */
+
+.profilepage-card-column {
+  min-width: 0;
+}
+
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.profilepage-content {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =================================
+   PROFILE HEADER
+================================= */
+
+.profilepage-header {
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  margin-bottom: 22px;
+
+  box-shadow:
+    0 3px 12px rgba(121, 12, 18, 0.04);
+}
+
+
+/* =================================
+   COVER
+================================= */
+
+.profilepage-cover {
+  height: 155px;
+
+  background: var(--wine);
+
+  position: relative;
+}
+
+
+/* =================================
+   AVATAR
+================================= */
+
+.profilepage-avatar {
+  position: absolute;
+
+  width: 108px;
+  height: 108px;
+
+  left: 34px;
+  bottom: -52px;
+
+  border-radius: 50%;
+
+  background: var(--cream);
+
+  border: 7px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilepage-avatar span {
+  color: var(--wine);
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+/* =================================
+   PROFILE NAME
+================================= */
+
+.profilepage-header-info {
+  padding: 65px 34px 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.profilepage-name-area {
+  min-width: 0;
+}
+
+.profilepage-name-area h1 {
+  margin: 0 0 7px;
+
+  font-family: "Anton", Arial, sans-serif;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  color: #292522;
+
+  letter-spacing: 0.3px;
+}
+
+.profilepage-name-area p {
+  margin: 0 0 5px;
+
+  font-size: 15px;
+
+  color: #57524d;
+}
+
+.profilepage-name-area span {
+  font-size: 13px;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   EDIT BUTTON
+================================= */
+
+.edit-profile-btn {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: var(--wine);
+  color: white;
+
+  padding: 11px 20px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+  background: #650a0f;
+}
+
+
+/* =================================
+   PROFILE STATS
+================================= */
+
+.profilepage-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+
+  border-top: 1px solid var(--border);
+
+  padding: 0;
+}
+
+
+/* Each stat gets exactly 1/3 of the row */
+
+.profilepage-stat {
+  min-width: 0;
+
+  padding: 17px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  text-align: center;
+
+  border-right: 1px solid var(--border);
+}
+
+.profilepage-stat:last-child {
+  border-right: none;
+}
+
+
+/* Number */
+
+.profilepage-stat strong {
+  display: block;
+
+  color: var(--wine);
+
+  font-size: 18px;
+  font-weight: bold;
+
+  line-height: 1.2;
+}
+
+
+/* Label */
+
+.profilepage-stat span {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* =================================
+   GENERAL SECTIONS
+================================= */
+
+.profilepage-section {
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  padding: 25px 28px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 3px 12px rgba(121, 12, 18, 0.035);
+}
+
+
+/* =================================
+   SECTION TITLE
+================================= */
+
+.section-title-row {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  gap: 15px;
+}
+
+.section-title-row h2 {
+  margin: 0;
+
+  font-family: "Anton", Arial, sans-serif;
+
+  font-size: 21px;
+  font-weight: 400;
+
+  color: var(--wine);
+}
+
+
+/* =================================
+   SMALL EDIT BUTTON
+================================= */
+
+.section-edit-btn {
+  background: transparent;
+
+  border: 1px solid var(--wine);
+
+  color: var(--wine);
+
+  padding: 7px 15px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.section-edit-btn:hover {
+  background: var(--wine);
+  color: white;
+}
+
+
+/* =================================
+   EMPTY PROFILE BOX
+================================= */
+
+.profilepage-empty-box {
+  background: var(--light-cream);
+
+  border-radius: 9px;
+
+  padding: 18px;
+}
+
+.profilepage-empty-box p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   EDUCATION
+================================= */
+
+.education-placeholder {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.education-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: var(--cream);
+
+  color: var(--wine);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.education-placeholder h3 {
+  margin: 0 0 5px;
+
+  font-size: 14px;
+}
+
+.education-placeholder p {
+  margin: 0 0 4px;
+
+  font-size: 13px;
+
+  color: #65615c;
+}
+
+.education-placeholder span {
+  font-size: 11px;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   INFORMATION
+================================= */
+
+.information-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.information-item {
+  background: var(--light-cream);
+
+  border-radius: 9px;
+
+  padding: 15px;
+}
+
+.information-item span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 11px;
+
+  color: var(--muted);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.information-item p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #383431;
+}
+
+
+/* =================================
+   EDIT PROFILE CARD
+================================= */
+
+.profile-edit-card {
+  background: var(--wine);
+
+  color: white;
+
+  border-radius: 16px;
+
+  padding: 25px 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.profile-edit-card h2 {
+  margin: 0 0 6px;
+
+  font-family: "Anton", Arial, sans-serif;
+
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.profile-edit-card p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  max-width: 500px;
+}
+
+
+/* =================================
+   MAIN EDIT BUTTON
+================================= */
+
+.profile-edit-main-btn {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: var(--cream);
+
+  color: var(--wine);
+
+  padding: 11px 20px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.profile-edit-main-btn:hover {
+  background: white;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+  .profilepage-layout {
+    grid-template-columns: 1fr;
+
+    max-width: 850px;
+  }
+
+  .profilepage-left-column {
+    display: none;
+  }
+
+}
+
+
+/* =================================
+   SMALL TABLET
+================================= */
+
+@media (max-width: 700px) {
+
+  .profilepage-layout {
+    display: block;
+
+    padding: 20px 15px;
+  }
+
+  .profilepage-sidebar {
+    display: none;
+  }
+
+  .profilepage-content {
+    max-width: none;
+  }
+
+  .profilepage-header-info {
+    flex-direction: column;
+  }
+
+  .edit-profile-btn {
+    align-self: flex-start;
+  }
+
+  /* Stats remain 3 columns */
+
+  .profilepage-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profilepage-stat {
+    padding: 15px 8px;
+  }
+
+  .profilepage-stat strong {
+    font-size: 16px;
+  }
+
+  .profilepage-stat span {
+    font-size: 10px;
+  }
+
+  .information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-edit-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =================================
+   VERY SMALL MOBILE
+================================= */
+
+@media (max-width: 420px) {
+
+  .profilepage-header-info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .profilepage-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profilepage-stat {
+    padding: 14px 4px;
+  }
+
+  .profilepage-stat strong {
+    font-size: 15px;
+  }
+
+  .profilepage-stat span {
+    font-size: 9px;
+  }
+
+  .profilepage-section {
+    padding: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.profilepage-layout {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 780px);
+  gap: 18px;
+
+  padding: 24px 24px 40px;
+
+  max-width: 1080px;
+  margin: 0 auto;
+
+  align-items: start;
+}
+.profilepage-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profilepage-header {
+  margin-bottom: 14px;
+}
+
+.profilepage-section {
+  margin-bottom: 14px;
+}
