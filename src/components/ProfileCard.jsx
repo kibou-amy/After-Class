@@ -34,7 +34,7 @@ export default function ProfileCard() {
 
           <div>
             <strong>—</strong>
-            <span>Connections</span>
+            <span>Classmates</span>
           </div>
 
         </div>
