@@ -10,7 +10,7 @@ import Messages from "./pages/Messages";
 import MyClass from "./pages/MyClass";
 
 
-import Coaches from "./pages/Coaches";
+
 import Formation from "./pages/Formation";
 
 import Coaches from "./pages/Coaches"; 
