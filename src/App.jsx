@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Profilemodal from "./pages/Profilemodal";
+import Saved from "./pages/Saved"
 
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -16,6 +17,8 @@ import AddStudent from "./pages/AddStudent";
 import "./index.css";
 import "./styles/auth.css";
 import "./styles/Messages.css";
+import "./styles/Profile.css"
+import "./styles/Saved.css";
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
         {/* Friend's pages */}
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profilemodal />} />
+        <Route path="/Saved" element={<Saved />} />
 
         {/* Your pages */}
         <Route path="/login" element={<Login />} />

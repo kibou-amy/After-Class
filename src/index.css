@@ -108,7 +108,7 @@ strong {
 
   height: 74px;
 
-  background: #FFF7E1;
+  background: white;
 
 
   display: flex;
@@ -452,8 +452,23 @@ strong {
 .profile-cover {
 
   height: 66px;
-
-  background: var(--wine);
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255, 247, 225, 0.20) 0 38px,
+      transparent 39px
+    ),
+    radial-gradient(
+      circle at 70% 100%,
+      rgba(255, 247, 225, 0.12) 0 55px,
+      transparent 56px
+    ),
+    linear-gradient(
+      120deg,
+      #57080d,
+      #790C12 60%,
+      #9e252c
+    );
 
 }
 
@@ -2044,7 +2059,8 @@ h1{
   letter-spacing: 5pxs;
 }
 .navbar{
-  background-color: #FFF7E1;
+ background-color: #FFF7E1;
+   border: 1px solid #790C12;
 }
 .app{
   background-color: #FFF7E1;
@@ -2062,3 +2078,4 @@ svg{
 
 
 
+ 

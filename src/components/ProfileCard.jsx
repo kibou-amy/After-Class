@@ -1,6 +1,6 @@
-import Profilemodal from "../pages/Profilemodal";
+import { Link } from "react-router-dom";
 
-import {Link} from "react-router-dom";
+
 export default function ProfileCard() {
   return (
     <section className="profile-card">
@@ -39,11 +39,11 @@ export default function ProfileCard() {
 
         </div>
  
-        <Link to="/Profilemodal" className="profile-link">
+        <a href="Profile">
           <button className="view-profile">
             View profile
           </button>
-        </Link>
+        </a>
 
       </div>
 
