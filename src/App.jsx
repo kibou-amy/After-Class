@@ -6,7 +6,11 @@ import Profilemodal from "./pages/Profilemodal";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Messages from "./pages/Messages";
-import Coaches from "./pages/Coaches"; // Added import here
+import Coaches from "./pages/Coaches"; // Added Dashboard imports here
+import AdminDash from "./pages/AdminDash";
+import StudentsList from "./pages/StudentsList";
+import AddStudent from "./pages/AddStudent";
+
 
 import "./index.css";
 import "./styles/auth.css";
@@ -26,6 +30,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/coaches" element={<Coaches />} />
+        <Route path="/AdminDash" element={<AdminDash />} />
+        <Route path="/StudentsList" element={<StudentsList />} />
+        <Route path="/AddStudent" element={<AddStudent />} />
 
       </Routes>
     </Router>
