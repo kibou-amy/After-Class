@@ -14,7 +14,6 @@ export default function Sidebar() {
           Home
         </a>
 
-
         <a
           href="myclass"
           className="sidebar-link"
@@ -45,7 +44,7 @@ export default function Sidebar() {
       <div className="sidebar-main">
 
         <a
-          href="#"
+          href="Saved"
           className="sidebar-link"
         >
           <span>☆</span>

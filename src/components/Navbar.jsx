@@ -1,17 +1,21 @@
 import logo from "../assets/Logo.png";
-
+import { Link } from "react-router-dom";
+import { useState } from "react";
 export default function Navbar() { 
   return ( 
 
     <header className="navbar"> 
-
+          
       {/* LOGO */} 
+
       <div className="navbar-logo"> 
+        <a href="/">
         <img 
           src={logo}
           alt="After Class Logo" 
           className="navbar-logo-img"
         />
+        </a>
       </div>
 
       {/* SEARCH */} 
