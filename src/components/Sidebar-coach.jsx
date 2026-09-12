@@ -64,18 +64,6 @@ export default function Sidebar() {
       </div>
 </div>
 
-      <div className="help-card">
-
-        <div className="help-icon">
-          ?
-        </div>
-
-        <div>
-          <strong>Need help?</strong>
-          <p>Contact your coach</p>
-        </div>
-
-      </div>
 
     </nav>
   );
