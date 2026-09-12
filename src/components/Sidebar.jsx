@@ -16,7 +16,7 @@ export default function Sidebar() {
 
 
         <a
-          href="#"
+          href="myclass"
           className="sidebar-link"
         >
           <span>✎</span>

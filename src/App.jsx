@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import Messages from "./pages/Messages";
 import Coaches from "./pages/Coaches";
 import Formation from "./pages/Formation";
+import MyClass from "./pages/MyClass";
 import AdminDash from "./pages/AdminDash";
 import StudentsList from "./pages/StudentsList";
 import AddStudent from "./pages/AddStudent";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/messages" element={<Messages />} />
+        <Route path="/myclass" element={<MyClass />} />
         <Route path="/coaches" element={<Coaches />} />
         <Route path="/formation" element={<Formation />} />
         <Route path="/AdminDash" element={<AdminDash />} />

@@ -1,0 +1,1055 @@
+/* =========================================================
+   MY CLASS PAGE
+   Same proportions as Messages page
+   ========================================================= */
+
+/* ===============================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   WHOLE PAGE
+========================================================= */
+
+.myclass-page {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  background: #fff7e1;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+========================================================= */
+
+.myclass-sidebar {
+  width: 350px;
+  min-width: 350px;
+  max-width: 350px;
+
+  height: 100vh;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border-right: 1px solid #eadfc9;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LOGO + NAVIGATION
+========================================================= */
+
+.myclass-top {
+  width: 100%;
+
+  height: 70px;
+  min-height: 70px;
+  max-height: 70px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eadfc9;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   NEW MESSAGE BUTTON
+========================================================= */
+
+.myclass-new-message {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 16px 20px 10px;
+}
+
+.new-message-button {
+  width: 100%;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 13px 0;
+
+  background: #790c12;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.new-message-button:hover {
+  background: #5d080d;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.myclass-logo {
+  flex-shrink: 0;
+
+  padding: 0;
+
+  margin: 0 18px 0 0;
+}
+
+.myclass-logo img {
+  width: 90px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+.myclass-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.myclass-nav a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: #665b59;
+
+  border-radius: 11px;
+
+  transition: all 0.2s ease;
+}
+
+.myclass-nav a svg {
+  width: 21px;
+  height: 21px;
+}
+
+.myclass-nav a:hover {
+  background: #fff1e5;
+  color: #790c12;
+}
+
+.myclass-nav a.active {
+  background: #790c12;
+  color: #ffffff;
+}
+
+.myclass-nav a.active:hover {
+  background: #790c12;
+  color: #ffffff;
+}
+
+/* =========================================================
+   CLASS TITLE
+========================================================= */
+
+.myclass-title {
+  width: 100%;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #f1e8d8;
+}
+
+
+/* CLASS AVATAR */
+
+.class-avatar {
+  width: 45px;
+  height: 45px;
+
+  min-width: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #790c12;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.class-avatar svg {
+  color: #ffffff;
+}
+
+/* CLASS TITLE TEXT */
+
+.myclass-title h1 {
+  margin: 0;
+
+  color: #241416;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.myclass-title p {
+  margin: 4px 0 0;
+
+  color: #9a8985;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.myclass-search {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 10px 20px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================================================
+   SEARCH INPUT WRAPPER
+========================================================= */
+.myclass-search {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 10px 20px 15px;
+}
+
+.myclass-search input {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: 1px solid #eadfc9;
+  border-radius: 10px;
+  background: #fffaf0 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239a8985' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") no-repeat 14px center;
+  color: #241416;
+  outline: none;
+  font-size: 14px;
+}
+
+.myclass-search input::placeholder {
+  color: #9a8985;
+}
+
+.myclass-search input:focus {
+  border-color: #790c12;
+}
+
+/* =========================================================
+   CLASSMATES HEADER
+========================================================= */
+
+.classmates-heading {
+  width: 100%;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 20px 10px;
+
+  color: #9a8985;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CLASSMATES LIST
+========================================================= */
+
+.classmate-list {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CLASSMATE
+========================================================= */
+
+.classmate-item {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  cursor: pointer;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #f1e8d8;
+
+  transition: background 0.2s ease;
+}
+
+
+/* HOVER */
+
+.classmate-item:hover {
+  background: #fff8ec;
+}
+
+
+/* COACH */
+
+.classmate-item.coach-item {
+  background: #f8e8df;
+}
+
+
+/* =========================================================
+   CLASSMATE AVATAR
+========================================================= */
+
+.classmate-avatar {
+  position: relative;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #790c12;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ONLINE / OFFLINE DOT
+========================================================= */
+
+.classmate-avatar .online,
+.classmate-avatar .offline {
+  position: absolute;
+
+  right: -1px;
+
+  bottom: 0;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ffffff;
+}
+
+.classmate-avatar .online {
+  background: #20a864;
+}
+
+.classmate-avatar .offline {
+  background: #9a8985;
+}
+
+
+/* =========================================================
+   CLASSMATE INFORMATION
+========================================================= */
+
+.classmate-content {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* TOP ROW */
+
+.classmate-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.classmate-top strong {
+  min-width: 0;
+
+  color: #241416;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* TIME */
+
+.classmate-time {
+  flex-shrink: 0;
+
+  color: #9a8985;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   BOTTOM ROW
+========================================================= */
+
+.classmate-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 4px;
+
+  min-width: 0;
+}
+
+
+/* STATUS */
+
+.status {
+  flex-shrink: 0;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.online-text {
+  color: #20a864;
+}
+
+.offline-text {
+  color: #9a8985;
+}
+
+
+/* SEPARATOR */
+
+.separator {
+  flex-shrink: 0;
+
+  color: #c7b9b0;
+
+  font-size: 10px;
+}
+
+
+/* LAST MESSAGE */
+
+.last-message {
+  min-width: 0;
+
+  color: #806f70;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   UNREAD NUMBER
+========================================================= */
+
+.unread-number {
+  width: 20px;
+  height: 20px;
+
+  min-width: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #790c12;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   RIGHT CHAT AREA
+========================================================= */
+
+.myclass-chat {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #fff7e1;
+}
+
+
+/* =========================================================
+   CHAT HEADER
+========================================================= */
+
+.myclass-header {
+  width: 100%;
+
+  height: 80px;
+
+  min-height: 80px;
+  max-height: 80px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 25px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eadfc9;
+}
+
+
+/* =========================================================
+   HEADER AVATAR
+========================================================= */
+
+.header-avatar {
+  width: 45px;
+  height: 45px;
+
+  min-width: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #790c12;
+
+  color: #ffffff;
+}
+
+.header-avatar svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* =========================================================
+   HEADER INFORMATION
+========================================================= */
+
+.header-information {
+  min-width: 0;
+}
+
+.header-information h2 {
+  margin: 0;
+
+  color: #790c12;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.2px;
+}
+
+.header-information p {
+  margin: 4px 0 0;
+
+  color: #9a8985;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+
+
+/* =========================================================
+   CLASS MESSAGES
+========================================================= */
+
+.myclass-messages {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  padding: 25px 30px 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   MESSAGE ROW
+========================================================= */
+
+.class-message {
+  max-width: 65%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  font-size: 13px;
+}
+
+
+/* RECEIVED */
+
+.class-message.received {
+  align-self: flex-start;
+}
+
+
+/* SENT */
+
+.class-message.sent {
+  align-self: flex-end;
+}
+
+
+/* =========================================================
+   SMALL AVATAR
+========================================================= */
+
+.small-avatar {
+  width: 32px;
+  height: 32px;
+
+  min-width: 32px;
+
+  margin-right: 8px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #790c12;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MESSAGE WRAPPER
+========================================================= */
+
+.message-wrapper {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   SENDER NAME
+========================================================= */
+
+.sender-name {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #806f70;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MESSAGE BUBBLE
+========================================================= */
+
+.message-bubble {
+  padding: 11px 15px;
+
+  border-radius: 14px;
+
+  font-size: 13px;
+}
+
+
+/* MESSAGE TEXT */
+
+.message-bubble p {
+  margin: 0;
+
+  line-height: 1.5;
+}
+
+
+/* TIME */
+
+.message-bubble span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 9px;
+
+  opacity: 0.6;
+}
+
+
+/* =========================================================
+   RECEIVED MESSAGE
+========================================================= */
+
+.class-message.received .message-bubble {
+  background: #f2eadf;
+
+  color: #241416;
+
+  border-bottom-left-radius: 4px;
+}
+
+
+/* =========================================================
+   SENT MESSAGE
+========================================================= */
+
+.class-message.sent .message-bubble {
+  background: #790c12;
+
+  color: #ffffff;
+
+  border-bottom-right-radius: 4px;
+}
+
+
+/* =========================================================
+   MESSAGE INPUT WRAPPER
+========================================================= */
+
+.myclass-input-wrapper {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 20px;
+
+  padding: 0 25px;
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   MESSAGE INPUT
+========================================================= */
+
+.myclass-input {
+  width: 100%;
+
+  min-height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #eadfc9;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 30px rgba(36, 20, 22, 0.10);
+}
+
+
+/* =========================================================
+   EMOJI + ATTACHMENT
+========================================================= */
+
+.emoji-button,
+.attachment-button {
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  padding: 6px;
+}
+
+
+/* =========================================================
+   INPUT FIELD
+========================================================= */
+
+.myclass-input input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 13px 15px;
+
+  border: 1px solid #eadfc9;
+
+  border-radius: 10px;
+
+  background: #fffaf0;
+
+  color: #241416;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.myclass-input input::placeholder {
+  color: #8c8381;
+}
+
+.myclass-input input:focus {
+  border-color: #790c12;
+
+  box-shadow:
+    0 0 0 3px rgba(121, 12, 18, 0.08);
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.send-button {
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px 18px;
+
+  background: #790c12;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.send-button:hover {
+  background: #5d080d;
+}
+
+
+/* =========================================================
+   SCROLLBARS
+========================================================= */
+
+.myclass-messages::-webkit-scrollbar,
+.classmate-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.myclass-messages::-webkit-scrollbar-track,
+.classmate-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.myclass-messages::-webkit-scrollbar-thumb,
+.classmate-list::-webkit-scrollbar-thumb {
+  background: #d8c9bc;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .myclass-sidebar {
+    width: 280px;
+
+    min-width: 280px;
+
+    max-width: 280px;
+  }
+
+  .myclass-input-wrapper {
+    bottom: 12px;
+
+    padding: 0 12px;
+  }
+
+  .myclass-messages {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+  .class-message {
+    max-width: 80%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .myclass-sidebar {
+    width: 100%;
+
+    min-width: 100%;
+
+    max-width: 100%;
+  }
+
+  .myclass-chat {
+    display: none;
+  }
+}
