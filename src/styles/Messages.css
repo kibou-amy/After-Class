@@ -114,6 +114,10 @@
   transition: 0.2s ease;
 }
 
+.messages-nav a svg {
+  width: 21px;
+  height: 21px;
+}
 
 /* HOVER */
 

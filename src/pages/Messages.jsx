@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/Logo.png";
+import { Home, MessageSquare, Settings, BookOpen } from "lucide-react";
 
 export default function Messages() {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -78,22 +79,25 @@ export default function Messages() {
       <img src={logo} alt="After Class" />
     </div>
 
-    {/* Navigation Icons */}
-    <nav className="messages-nav">
+  <nav className="messages-nav">
 
-      <a href="/" title="Home">
-        🏠
-      </a>
-
-      <a href="/messages" className="active" title="Messages">
-        ✉
-      </a>
-
-      <a href="/settings" title="Settings">
-    ⚙️
+  <a href="/" title="Home">
+    <Home size={21} strokeWidth={2} />
   </a>
 
-    </nav>
+  <a href="/messages" className="active" title="Messages">
+    <MessageSquare size={21} strokeWidth={2} />
+  </a>
+
+  <a href="/myclass" title="My Class">
+    <BookOpen size={21} strokeWidth={2} />
+  </a>
+
+  <a href="/settings" title="Settings">
+    <Settings size={21} strokeWidth={2} />
+  </a>
+
+</nav>
 
   </div>
 
