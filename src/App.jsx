@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Messages from "./pages/Messages";
 import Coaches from "./pages/Coaches";
+import Formation from "./pages/Formation";
 
 import "./index.css";
 import "./styles/auth.css";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/coaches" element={<Coaches />} />
+        <Route path="/formation" element={<Formation />} />
       </Routes>
     </Router>
   );
