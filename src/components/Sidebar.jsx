@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Nour from "../assets/Nour.jpg"
 
 export default function Sidebar() {
   return (
@@ -67,8 +68,10 @@ export default function Sidebar() {
       <div className="help-card">
 
         <div className="help-icon">
-          ?
+        <img src={Nour} alt="Coach's pfp"></img> 
         </div>
+
+
 
         <div>
           <strong>Need help?</strong>

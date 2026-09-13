@@ -484,11 +484,11 @@ strong {
 }
 
 
-.profile-avatar {
+.profile-avatar img {
 
-  width: 64px;
+  width: 100px;
 
-  height: 64px;
+  height: 100px;
 
   border-radius: 50%;
 
@@ -754,11 +754,11 @@ strong {
 }
 
 
-.help-icon {
+.help-icon img {
 
-  width: 28px;
+  width: 35px;
 
-  height: 28px;
+  height: 35px;
 
   background: var(--wine);
 
