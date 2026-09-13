@@ -1,11 +1,14 @@
+
 import Navbar from "../components/Navbar";
+import ilhem from "../assets/Ilhem.jpg";
+
 export default function Profile() {
   return (
     <>
-    <div>
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
 
-    </div>
       {/* MAIN PROFILE PAGE */}
       <main className="profilepage-content">
 
@@ -16,45 +19,40 @@ export default function Profile() {
 
           {/* Cover */}
           <div className="profilepage-cover">
-
             {/* BACKEND:
-                User profile picture will be displayed here
+                User cover picture will be displayed here
             */}
-            <div className="profilepage-avatar">
-              <span>?</span>
-            </div>
-
           </div>
 
+          {/* =================================
+              PROFILE PICTURE
+              OUTSIDE COVER SO IT CAN OVERLAP
+          ================================= */}
+          <div className="profilepage-avatar">
+            <img src={ilhem} alt="Profile" />
+          </div>
+
+          {/* =================================
+              PROFILE HEADER INFO
+          ================================= */}
           <div className="profilepage-header-info">
 
             <div className="profilepage-name-area">
 
-              {/* BACKEND:
-                  User's name will be inserted here
-              */}
-              <h1>
-                Your name
-              </h1>
+              {/* BACKEND: User's name */}
 
-              {/* BACKEND:
-                  User's role will be inserted here
-              */}
-              <p>
-                Student
-              </p>
+              <h1>ILHEM ZERKAOUI</h1>
 
-              {/* BACKEND:
-                  User's course will be inserted here
-              */}
-              <span>
-                Your course
-              </span>
+              {/* BACKEND: User's role */}
+              <p>Student</p>
+
+              {/* BACKEND: User's course */}
+              <span>Web Development</span>
 
             </div>
 
             {/* BACKEND:
-                Connect this button to the edit-profile functionality
+                Connect to edit profile functionality
             */}
             <button className="edit-profile-btn">
               Edit profile
@@ -69,19 +67,19 @@ export default function Profile() {
 
             <div className="profilepage-stat">
               {/* BACKEND: number of posts */}
-              <strong>—</strong>
+              <strong>5</strong>
               <span>Posts</span>
             </div>
 
             <div className="profilepage-stat">
               {/* BACKEND: number of classmates */}
-              <strong>—</strong>
+              <strong>10</strong>
               <span>Classmates</span>
             </div>
 
             <div className="profilepage-stat">
               {/* BACKEND: course name */}
-              <strong>—</strong>
+              <strong>Web Dev </strong>
               <span>Course</span>
             </div>
 
@@ -95,25 +93,17 @@ export default function Profile() {
         <section className="profilepage-section">
 
           <div className="section-title-row">
-
             <h2>About</h2>
-
-            {/* BACKEND:
-                Connect to edit functionality
-            */}
+       
+            {/* BACKEND: Edit functionality */}
             <button className="section-edit-btn">
               Edit
             </button>
-
           </div>
 
-          {/* BACKEND:
-              User's biography goes here
-          */}
+          {/* BACKEND: User biography */}
           <div className="profilepage-empty-box">
-            <p>
-              Your bio will appear here.
-            </p>
+            <p>Your bio will appear here.</p>
           </div>
 
         </section>
@@ -124,62 +114,38 @@ export default function Profile() {
         <section className="profilepage-section">
 
           <div className="section-title-row">
-
             <h2>Profile information</h2>
 
-            {/* BACKEND:
-                Connect to edit functionality
-            */}
+            {/* BACKEND: Edit functionality */}
             <button className="section-edit-btn">
               Edit
             </button>
-
           </div>
 
           <div className="information-grid">
 
             <div className="information-item">
-
               <span>Email</span>
-
-              {/* BACKEND:
-                  User email goes here
-              */}
+              {/* BACKEND: User email */}
               <p>—</p>
-
             </div>
 
             <div className="information-item">
-
               <span>Course</span>
-
-              {/* BACKEND:
-                  User course goes here
-              */}
+              {/* BACKEND: User course */}
               <p>—</p>
-
             </div>
 
             <div className="information-item">
-
               <span>Year</span>
-
-              {/* BACKEND:
-                  User academic year goes here
-              */}
+              {/* BACKEND: Academic year */}
               <p>—</p>
-
             </div>
 
             <div className="information-item">
-
               <span>Joined</span>
-
-              {/* BACKEND:
-                  Account creation date goes here
-              */}
+              {/* BACKEND: Account creation date */}
               <p>—</p>
-
             </div>
 
           </div>
@@ -192,21 +158,15 @@ export default function Profile() {
         <section className="profile-edit-card">
 
           <div>
-
-            <h2>
-              Keep your profile updated
-            </h2>
+            <h2>Keep your profile updated</h2>
 
             <p>
               Add information about yourself so your
               classmates can get to know you.
             </p>
-
           </div>
 
-          {/* BACKEND:
-              Connect this button to the edit profile form/modal
-          */}
+          {/* BACKEND: Edit profile form/modal */}
           <button className="profile-edit-main-btn">
             Edit profile
           </button>

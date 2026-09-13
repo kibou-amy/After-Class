@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bukhari+Script&display=swap');
-
 
 /* =================================
    COLORS
@@ -63,6 +61,7 @@ button:focus-visible {
 
 .profile-page {
   min-height: 100vh;
+
   background:
     radial-gradient(
       circle at 85% 15%,
@@ -79,6 +78,7 @@ button:focus-visible {
 
 .profilepage-layout {
   display: grid;
+
   grid-template-columns: 245px minmax(0, 1fr);
 
   gap: 30px;
@@ -87,6 +87,7 @@ button:focus-visible {
   max-width: 1280px;
 
   margin: 0 auto;
+
   padding: 32px 30px 60px;
 
   align-items: start;
@@ -95,6 +96,7 @@ button:focus-visible {
 .profilepage-left-column {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 
   min-width: 0;
@@ -135,10 +137,12 @@ button:focus-visible {
   position: relative;
 
   background: var(--white);
+
   border: 1px solid var(--border);
+
   border-radius: 24px;
 
-  overflow: hidden;
+  overflow: visible;
 
   margin-bottom: 24px;
 
@@ -160,7 +164,10 @@ button:focus-visible {
   height: 190px;
 
   position: relative;
+
   overflow: hidden;
+
+  border-radius: 24px 24px 0 0;
 
   background:
     radial-gradient(
@@ -168,11 +175,13 @@ button:focus-visible {
       rgba(255, 247, 225, 0.20) 0 65px,
       transparent 66px
     ),
+
     radial-gradient(
       circle at 70% 100%,
       rgba(255, 247, 225, 0.12) 0 90px,
       transparent 91px
     ),
+
     linear-gradient(
       120deg,
       var(--wine-dark),
@@ -181,12 +190,14 @@ button:focus-visible {
     );
 }
 
-/* Decorative cover details */
+
+/* Decorative cover circle */
 
 .profilepage-cover::before {
   content: "";
 
   position: absolute;
+
   width: 240px;
   height: 240px;
 
@@ -194,40 +205,38 @@ button:focus-visible {
   top: -140px;
 
   border: 1px solid rgba(255, 247, 225, 0.22);
+
   border-radius: 50%;
 }
 
+
+/* Hide old cover text */
+
 .profilepage-cover::after {
-  content: "AFTER";
-
-  position: absolute;
-
-  right: 32px;
-  bottom: 18px;
-
-  color: rgba(255, 247, 225, 0.15);
-
-  font-family: "Bukhari Script", cursive;
-  font-size: 42px;
-
-  transform: rotate(-8deg);
+  display: none;
 }
 
 
 /* =================================
    AVATAR
+   CENTERED OVER THE COVER
 ================================= */
 
 .profilepage-avatar {
   position: absolute;
 
-  width: 118px;
-  height: 118px;
+  width: 181px;
+  height: 181px;
 
-  left: 34px;
-  bottom: -58px;
+  /* CENTER HORIZONTALLY */
+  left: 50%;
 
-  z-index: 2;
+  transform: translateX(-50%);
+
+  /* OVERLAPS THE COVER */
+  top: 132px;
+
+  z-index: 20;
 
   border-radius: 50%;
 
@@ -235,19 +244,40 @@ button:focus-visible {
 
   border: 7px solid var(--white);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.09);
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.09);
 
   overflow: hidden;
 }
 
+
+/* Actual profile image */
+
+.profilepage-avatar img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* Placeholder text if no image */
+
 .profilepage-avatar span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
   color: var(--wine);
 
   font-family: "Bukhari Script", cursive;
+
   font-size: 35px;
 
   transform: rotate(-5deg);
@@ -259,13 +289,19 @@ button:focus-visible {
 ================================= */
 
 .profilepage-header-info {
+  position: relative;
+
+  z-index: 1;
+
   display: flex;
 
   justify-content: space-between;
+
   align-items: flex-start;
 
   gap: 24px;
 
+  /* LEAVES SPACE UNDER CENTERED AVATAR */
   padding: 76px 34px 25px;
 }
 
@@ -277,10 +313,13 @@ button:focus-visible {
   margin: 0 0 8px;
 
   font-family: "Anton", Arial, sans-serif;
+
   font-size: 34px;
+
   font-weight: 400;
 
   line-height: 1.1;
+
   letter-spacing: 0.3px;
 
   color: var(--text);
@@ -290,6 +329,7 @@ button:focus-visible {
   margin: 0 0 8px;
 
   font-size: 14px;
+
   font-weight: 600;
 
   color: var(--wine);
@@ -303,11 +343,13 @@ button:focus-visible {
   padding: 7px 12px;
 
   background: var(--cream-soft);
+
   color: #756b60;
 
   border-radius: 20px;
 
   font-size: 12px;
+
   font-weight: 600;
 }
 
@@ -320,18 +362,23 @@ button:focus-visible {
   flex-shrink: 0;
 
   border: none;
+
   border-radius: 10px;
 
   padding: 12px 21px;
 
   background: var(--wine);
+
   color: var(--white);
 
   font-size: 13px;
+
   font-weight: bold;
 
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   transition:
@@ -345,7 +392,8 @@ button:focus-visible {
 
   transform: translateY(-2px);
 
-  box-shadow: 0 5px 15px rgba(121, 12, 18, 0.18);
+  box-shadow:
+    0 5px 15px rgba(121, 12, 18, 0.18);
 }
 
 .edit-profile-btn:active {
@@ -358,12 +406,19 @@ button:focus-visible {
 ================================= */
 
 .profilepage-stats {
+  position: relative;
+
+  z-index: 1;
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   border-top: 1px solid var(--border);
 
   background: #fffdf8;
+
+  border-radius: 0 0 24px 24px;
 }
 
 .profilepage-stat {
@@ -372,9 +427,11 @@ button:focus-visible {
   padding: 21px 15px;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 6px;
@@ -400,6 +457,7 @@ button:focus-visible {
   color: var(--wine);
 
   font-size: 23px;
+
   font-weight: 700;
 
   line-height: 1.2;
@@ -411,9 +469,11 @@ button:focus-visible {
   color: var(--muted);
 
   font-size: 11px;
+
   font-weight: 600;
 
   text-transform: uppercase;
+
   letter-spacing: 0.7px;
 }
 
@@ -428,6 +488,7 @@ button:focus-visible {
   background: var(--white);
 
   border: 1px solid var(--border);
+
   border-radius: 20px;
 
   padding: 28px 30px;
@@ -454,6 +515,7 @@ button:focus-visible {
   display: flex;
 
   justify-content: space-between;
+
   align-items: center;
 
   gap: 15px;
@@ -465,7 +527,9 @@ button:focus-visible {
   margin: 0;
 
   font-family: "Anton", Arial, sans-serif;
+
   font-size: 23px;
+
   font-weight: 400;
 
   color: var(--wine);
@@ -482,6 +546,7 @@ button:focus-visible {
   border: 1px solid var(--border);
 
   background: var(--cream-light);
+
   color: var(--wine);
 
   padding: 8px 16px;
@@ -489,6 +554,7 @@ button:focus-visible {
   border-radius: 9px;
 
   font-size: 12px;
+
   font-weight: bold;
 
   transition:
@@ -499,6 +565,7 @@ button:focus-visible {
 
 .section-edit-btn:hover {
   background: var(--wine);
+
   border-color: var(--wine);
 
   color: var(--white);
@@ -517,6 +584,7 @@ button:focus-visible {
   min-height: 90px;
 
   display: flex;
+
   align-items: center;
 
   padding: 22px 24px;
@@ -539,9 +607,11 @@ button:focus-visible {
   position: absolute;
 
   top: 7px;
+
   left: 17px;
 
   font-family: Georgia, serif;
+
   font-size: 42px;
 
   color: rgba(121, 12, 18, 0.13);
@@ -551,6 +621,7 @@ button:focus-visible {
   margin: 0;
 
   font-size: 13px;
+
   line-height: 1.7;
 
   color: var(--muted);
@@ -564,7 +635,8 @@ button:focus-visible {
 .information-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
   gap: 14px;
 }
@@ -575,6 +647,7 @@ button:focus-visible {
   background: var(--cream-light);
 
   border: 1px solid #f0e5d2;
+
   border-radius: 13px;
 
   padding: 17px 18px;
@@ -586,6 +659,7 @@ button:focus-visible {
 
 .information-item:hover {
   background: var(--cream-soft);
+
   border-color: #e7d4b5;
 }
 
@@ -595,11 +669,13 @@ button:focus-visible {
   margin-bottom: 8px;
 
   font-size: 10px;
+
   font-weight: 700;
 
   color: var(--muted);
 
   text-transform: uppercase;
+
   letter-spacing: 1px;
 }
 
@@ -607,6 +683,7 @@ button:focus-visible {
   margin: 0;
 
   font-size: 14px;
+
   font-weight: 600;
 
   color: var(--text);
@@ -621,6 +698,7 @@ button:focus-visible {
 
 .education-placeholder {
   display: flex;
+
   align-items: center;
 
   gap: 16px;
@@ -633,12 +711,15 @@ button:focus-visible {
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 14px;
 
   background: var(--cream);
+
   color: var(--wine);
 
   font-size: 22px;
@@ -648,6 +729,7 @@ button:focus-visible {
   margin: 0 0 5px;
 
   font-size: 15px;
+
   font-weight: 700;
 }
 
@@ -655,11 +737,13 @@ button:focus-visible {
   margin: 0 0 5px;
 
   font-size: 13px;
+
   color: #65615c;
 }
 
 .education-placeholder span {
   font-size: 11px;
+
   color: var(--muted);
 }
 
@@ -674,6 +758,7 @@ button:focus-visible {
   display: flex;
 
   justify-content: space-between;
+
   align-items: center;
 
   gap: 25px;
@@ -692,6 +777,7 @@ button:focus-visible {
       rgba(255, 247, 225, 0.14),
       transparent 40%
     ),
+
     linear-gradient(
       120deg,
       var(--wine-dark),
@@ -700,7 +786,8 @@ button:focus-visible {
 
   color: var(--white);
 
-  box-shadow: 0 8px 25px rgba(121, 12, 18, 0.12);
+  box-shadow:
+    0 8px 25px rgba(121, 12, 18, 0.12);
 }
 
 .profile-edit-card::after {
@@ -721,6 +808,7 @@ button:focus-visible {
 
 .profile-edit-card > div {
   position: relative;
+
   z-index: 1;
 
   min-width: 0;
@@ -730,7 +818,9 @@ button:focus-visible {
   margin: 0 0 9px;
 
   font-family: "Anton", Arial, sans-serif;
+
   font-size: 23px;
+
   font-weight: 400;
 
   line-height: 1.2;
@@ -742,6 +832,7 @@ button:focus-visible {
   max-width: 440px;
 
   font-size: 13px;
+
   line-height: 1.6;
 
   color: rgba(255, 255, 255, 0.74);
@@ -754,19 +845,23 @@ button:focus-visible {
 
 .profile-edit-main-btn {
   position: relative;
+
   z-index: 1;
 
   flex-shrink: 0;
 
   border: none;
+
   border-radius: 10px;
 
   padding: 12px 21px;
 
   background: var(--cream);
+
   color: var(--wine);
 
   font-size: 13px;
+
   font-weight: bold;
 
   transition:
@@ -801,6 +896,7 @@ button:focus-visible {
 
   .profilepage-header-info {
     padding-left: 28px;
+
     padding-right: 28px;
   }
 
@@ -854,23 +950,33 @@ button:focus-visible {
 
   .profilepage-cover {
     height: 145px;
+
+    border-radius: 18px 18px 0 0;
   }
 
-  .profilepage-cover::after {
-    font-size: 32px;
-    right: 20px;
-    bottom: 15px;
-  }
+
+  /* =================================
+     MOBILE AVATAR — CENTERED
+  ================================= */
 
   .profilepage-avatar {
     width: 100px;
     height: 100px;
 
-    left: 22px;
-    bottom: -50px;
+    /* CENTER HORIZONTALLY */
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    top: 110px;
 
     border-width: 6px;
   }
+
+
+  /* =================================
+     MOBILE HEADER INFO
+  ================================= */
 
   .profilepage-header-info {
     flex-direction: column;
@@ -892,6 +998,8 @@ button:focus-visible {
 
   .profilepage-stats {
     grid-template-columns: repeat(3, 1fr);
+
+    border-radius: 0 0 18px 18px;
   }
 
   .profilepage-stat {
@@ -904,6 +1012,7 @@ button:focus-visible {
 
   .profilepage-stat span {
     font-size: 9px;
+
     letter-spacing: 0.3px;
   }
 
@@ -962,11 +1071,13 @@ button:focus-visible {
 
   .profilepage-layout {
     padding-left: 10px;
+
     padding-right: 10px;
   }
 
   .profilepage-header-info {
     padding-left: 18px;
+
     padding-right: 18px;
   }
 
@@ -995,10 +1106,8 @@ button:focus-visible {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+
     animation-duration: 0.01ms !important;
   }
 
-}
-.profilepage-cover::after {
-  display: none;
 }
