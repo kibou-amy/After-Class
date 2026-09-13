@@ -13,6 +13,7 @@ import MyClass from "./pages/MyClass";
 import AdminDash from "./pages/AdminDash";
 import StudentsList from "./pages/StudentsList";
 import AddStudent from "./pages/AddStudent";
+import Homecoach from "./pages/Home-coach"
 
 import "./index.css";
 import "./styles/auth.css";
@@ -26,6 +27,8 @@ function App() {
       <Routes>
         {/* Friend's pages */}
         <Route path="/" element={<Home />} />
+        <Route path="/coach" element={<Homecoach />} />
+
         <Route path="/profile" element={<Profilemodal />} />
         <Route path="/Saved" element={<Saved />} />
 

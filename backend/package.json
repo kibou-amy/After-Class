@@ -13,8 +13,13 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
+<<<<<<< HEAD
     "jsonwebtoken": "^9.0.3",
+=======
+    "mongoose": "^9.10.0",
+>>>>>>> 272cfbfa7e4f9d5173c3a8ac26287418bdb03f5d
     "nodemon": "^3.1.14"
   }
 }
