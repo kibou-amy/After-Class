@@ -63,7 +63,7 @@ export default function Home() {
               </h1>
 
               <p className="welcome-text">
-                Stay connected with your school community.
+                Stay connected with your students.
               </p>
             </div>
 

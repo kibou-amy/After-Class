@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import nour from "../assets/Nour.jpg"
+import ilhem from "../assets/Ilhem.jpg"
 
 
 export default function ProfileCard() {
@@ -12,13 +14,13 @@ export default function ProfileCard() {
         {/* BACKEND USER IMAGE */}
 
         <div className="profile-avatar">
-          ?
+          <img src={ilhem} alt="Profile picture"></img>
         </div>
 
 
         {/* BACKEND USER INFO */}
 
-        <h3></h3>
+        <h3><b>Zerkaoui Ilhem</b></h3>
 
         <p className="profile-role"></p>
 
